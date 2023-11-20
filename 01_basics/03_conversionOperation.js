@@ -43,3 +43,18 @@ console.log(str1); // true
 // 1 => true , 0 => false
 // "" => false
 // "nabeel" => true
+
+
+/* -------- Operations ----------- */
+
+console.log(1 + 2);
+console.log(1 + "2");
+console.log("1" + 2);
+console.log("1" + 2 + 2);
+console.log(1 + 2 + "2"); //32
+
+
+// If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
+
+//If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing.
+
