@@ -47,3 +47,49 @@ function loginUserMsg(username = "Nabeel"){
     }
     return `${username} just logged in`;
 }
+
+
+
+// Rest Operator - For allowing dynamic parameter
+function calculateCartPrice(...price){
+    return price
+}
+
+console.log(calculateCartPrice(2000, 300, 10000, 200));  // [2000, 300, 10000, 200]
+
+
+function cartPrice(p1,p2,...price){
+    return price
+}
+
+console.log(cartPrice(2000, 300, 10000, 200));  // [10000, 200]
+
+
+
+// Passing a Object
+
+let user = {
+    username : "Nabeel",
+    price : 199
+}
+
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+// handleObject(user);
+
+handleObject({
+    username : "Pushkar123",
+    price: 399
+})
+
+
+// Passing an Arrays...
+
+const myArray = [200, 400, 100, 600]
+
+function returnSecValue(getArray){
+    return getArray[2];
+}
+
+console.log(returnSecValue(myArray));   // 100
