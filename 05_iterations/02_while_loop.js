@@ -16,9 +16,11 @@ while (arr <myArray.length) {
 
 
 
-// Do- while Loop
+// Do- while Loop 
 let score = 11;
 do {
 console.log(`Score is ${score}`);
 score++;
 } while (score <= 10);
+
+// Note :- It always run once if condition is not satisfied......
