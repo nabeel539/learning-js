@@ -15,8 +15,9 @@ for (const greet of greetings) {
 
 
 // Maps
-/* Map Object holds key-value pairs. 
+/*  Map Object holds key-value pairs. 
     In holds Unique Value.
+    always return value.
 */
 const map1 = new Map();
 
