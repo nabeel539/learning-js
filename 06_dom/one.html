@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color:#FFF;
+
+        }
+        span{
+            display: none;
+        }
+    </style>
+</head>
+
+<body  class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Leaning DOM <span>Test text</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, architecto!</p>
+        <h1>Lorem ipsum dolor sit,</h1>
+        <h1>Lorem ipsum dolor sit,</h1>
+        
+
+        <ul>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+        </ul>
+
+
+
+    </div>
+</body>
+</html>
+
+<script>
+
+
+
+    let title = document.getElementById('title');
+    console.log(title);
+
+    document.querySelector(".heading")
+    document.querySelector("#title")
+
+
+    // querySelector - select 1st item
+    let h1 = document.querySelector("h1")
+    console.log('queryselector',h1);
+
+    // querySelectorAll - select All list of item 
+    let myul = document.querySelector('ul')
+    console.log(myul);
+
+    const myList = document.querySelectorAll('li');
+    console.log('querySelectorAll ',myList);
+    myList[0].style.color = 'red';
+
+    // looping through Nodelist
+    myList.forEach((li) =>{
+        li.style.backgroundColor = 'green'
+        li.style.marginTop = '3px';
+    })
+
+
+
+    const listItem = document.getElementsByClassName('list-item')
+
+    console.log('classname',listItem);  // HTMLCollection - we cannot perform forEach() we have to convert it into array
+    let convetedArray = Array.from(listItem)
+    convetedArray.forEach((mylist) => {
+         mylist.style.color = 'red'
+    })
+ 
+    /*
+    note :- while setting Attribute (class) , always Overrides the previous class
+    document.getElementById('title').setAttribute('class', 'test')    
+    */
+
+    // innerText - only display text
+    console.log('innertext',title.innerText);
+
+    //textContent - All text
+    console.log('textContent',title.textContent);
+    
+    // innerHTML - return content within that element.
+    console.log('innerHTML', title.innerHTML);
+
+    
+   
+
+
+
+</script>
