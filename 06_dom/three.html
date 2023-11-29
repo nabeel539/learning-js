@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+         .bg-black{
+            background-color: #212121;
+            color:#FFF;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    
+</body>
+<script>
+
+
+    function createADiv(bgColor, textContent) {
+        const div = document.createElement('div')
+        console.log(div);
+        div.className= 'main'
+        div.id = Math.round(Math.random()*10 + 1)
+        div.setAttribute("title", "myTitle")
+        div.style.backgroundColor = `${bgColor}`
+        // console.log('bgcolor',bgColor);
+        div.style.padding = "12px"
+        // div.innerText = "Hello World"
+
+        // using above technique - Overrides the attributes (2 steps)
+
+        const addText = document.createTextNode(`${textContent}`)
+        div.appendChild(addText)
+
+        document.body.appendChild(div)
+    }
+
+    createADiv(" blue", 'Hello');
+    createADiv(" green", "World");
+    createADiv(" red", "Learning");
+    createADiv("darkviolet", "JavaScript");
+    
+
+</script>
+</html>
