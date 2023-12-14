@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setTimeout & setInterval</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // function is executed once, after 2 sec.
+    setTimeout(() => {
+        console.log("Hii");
+    }, 2000);
+
+
+
+
+    const sayNabeel = ()=>{
+        // console.log("Nabeel");
+    }
+    // function is called in every 3sec Interval.
+    setInterval(sayNabeel, 3000)
+
+    const changeText = ()=>{
+        document.querySelector('h1')
+        .innerHTML= "Learning JS From Hitesh From Youtube"
+    }
+
+    const changeMe = setTimeout(changeText, 3000);
+
+    document.querySelector("button").addEventListener('click', ()=>{
+        clearTimeout(changeMe)
+        console.log("STOPPED.....");
+    })
+</script>
+</html>
