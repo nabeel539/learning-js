@@ -40,4 +40,21 @@ console.log(userTwo); // this overrides the previous object , So we are creating
 const userFour = new User("PaPa", 10, true)
 // console.log(userTwo);
 // console.log(userThree);
-console.log(userFour);
+console.log(userFour.constructor);      // reference of that object
+
+
+
+// instance of
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+  const auto = new Car('Honda', 'Accord', 1998);
+  
+  console.log(auto instanceof Car);
+  // Expected output: true
+  
+  console.log(auto instanceof Object);
+  // Expected output: true
+  
