@@ -1,24 +1,43 @@
 const user = {
-    username :"Nabeel",
-    login:8,
-    signIn : true,
-    getUserDetails: function () {
+        username :"Nabeel",
+        login:8,
+        signIn : true,
+        getUserDetails: function () {
         console.log("Getting details from DB....");
     }
 }
 
-// console.log(user.signIn);
-// console.log(user.getUserDetails());
+console.log(user.signIn);
+console.log(user.getUserDetails());
 
 
-function User(username, loginCount, isLoggedIn){
+// this keyword
+const userOne = {
+    username :"MonkeyYT",
+    login:8,
+    signIn : true,
+    getUserDetails: function () {
+        console.log(`Username : ${this.username}`);
+    }
+}
+
+console.log(userOne.getUserDetails());
+
+
+
+// Constructor
+function User(username,loginCount, isLoggedIn ){
     this.username = username;
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn;
-    // Left side Variable
-    // right side Parameter
+    return this
 }
 
+const userTwo = User("Nabeel", 12, true)
+const userThree = User("Safique", 23, false)
+console.log(userTwo); // this overrides the previous object , So we are creating object with new keyword
 
-const userOne = User("sananansa", 10, false)
-console.log(userOne.us);
+const userFour = new User("PaPa", 10, true)
+// console.log(userTwo);
+// console.log(userThree);
+console.log(userFour);
